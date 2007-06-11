@@ -1,14 +1,20 @@
+//Parte do exercício 3.11
 package ch03.exercicios;
 
-public class Exer3_11 {
+public class GradeBook {
 	private String courseName;
-	private String instrutor;  //Questão A
 	
-	public Exer3_11( String name )                                       
+	//Questão A - Variável instrutor
+	private String instrutor;
+
+	//	Questão C - Modificar construtor
+	public GradeBook( String name, String nomeInstrutor )                                       
 	{                                                                     
 		courseName = name;
+		instrutor = nomeInstrutor;
 	}
 
+	//Questão B - Inserir get e set para instrutor
 	public void serInstrutor(String instrutorNome){
 		instrutor = instrutorNome;
 	}
@@ -28,7 +34,9 @@ public class Exer3_11 {
 
 	public void displayMessage()
 	{
-		System.out.printf( "Welcome to the grade book for\n%s!\n", 
+		System.out.printf( "Welcome to the grade book for\n%s!\n\n", 
 				getCourseName() );
+		System.out.printf("This couse is presented by:\n%s!\n",
+				getInstrutor());
 	}
 }
