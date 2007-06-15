@@ -18,7 +18,7 @@
 
 package ch02.exercicios;
 
-public class Exer2_31 {
+public class Exer02_31 {
 	public static void main(String[] args) {
 		System.out.println("número quadrado cubo");
 		System.out.printf( "%d      %s      %s\n",0,Math.pow(0,2),Math.pow(0,3));

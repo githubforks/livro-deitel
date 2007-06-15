@@ -3,13 +3,13 @@
 
 package ch03;
 
-public class GradeBookTest3_1
+public class GradeBookTest03_02
 {
 	// método main inicia a execução de programa
 	public static void main( String args[] )
 	{ 
 		// cria um objeto GradeBook e o atribui a myGradeBook
-		GradeBook3_1 myGradeBook = new GradeBook3_1();
+		GradeBook03_01 myGradeBook = new GradeBook03_01();
 
 		// chama método displayMessage de myGradeBook
 		myGradeBook.displayMessage();

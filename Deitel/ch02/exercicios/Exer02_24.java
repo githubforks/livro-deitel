@@ -2,7 +2,7 @@ package ch02.exercicios;
 
 import java.util.Scanner;
 
-public class Exer2_24 {
+public class Exer02_24 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int n1,n2,n3,n4,n5,maior;

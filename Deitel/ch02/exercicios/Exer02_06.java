@@ -4,7 +4,7 @@ package ch02.exercicios;
 //Calcula o produto de três inteiros
 import java.util.Scanner;
 
-public class Exer2_06 {
+public class Exer02_06 {
 	public static void main(String[] args) {
 		//cria um Scanner para obter entrada a partir da janela de comando
 		Scanner input = new Scanner(System.in);

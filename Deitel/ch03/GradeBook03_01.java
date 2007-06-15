@@ -3,7 +3,7 @@
 
 package ch03;
 
-public class GradeBook3_1
+public class GradeBook03_01
 {
 // exibe uma mensagem de boas-vindas para o usuário GradeBook
 public void displayMessage()
