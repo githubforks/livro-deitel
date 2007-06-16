@@ -1,34 +1,41 @@
-package ch03;
-//Fig. 3.7: GradeBook.java
-//classe GradeBook que contém uma variável de instância courseName
-//e métodos para configurar e obter seu valor.
+package ch05;
+//Fig. 5.26: Shapes.java
+//Demonstra o desenho de diferentes formas.
+import java.awt.Graphics;
+import javax.swing.JPanel;
 
-public class GradeBook03_07
+public class Shapes extends JPanel
 {
-	private String courseName; // nome do curso para esse GradeBook
+	private int choice; // escolha do usuário de qual forma desenhar
 
-	// método para configurar o nome do curso
-	public void setCourseName( String name )      
-	{                                             
-		courseName = name; // armazena o nome do curso
-	} // termina o método setCourseName
-
-	// método para recuperar o nome do curso
-	public String getCourseName()        
-	{                                    
-		return courseName;                
-	} // termina o método getCourseName
-
-	// exibe uma mensagem de boas-vindas para o usuário GradeBook
-	public void displayMessage()
+	// construtor configura a escolha do usuário
+	public Shapes( int userChoice )
 	{
-		// essa instrução chama getCourseName para obter o
-		// nome do curso que esse GradeBook representa
-		System.out.printf( "Welcome to the grade book for\n%s!\n", 
-				getCourseName() );
-	} // termina o método displayMessage
+		choice = userChoice;
+	} // fim do construtor Shapes
 
-} // fim da classe GradeBook
+	// desenha uma cascata de formas que iniciam do canto superior esquerdo 
+	public void paintComponent( Graphics g )
+	{
+		super.paintComponent( g );
+
+		for ( int i = 0; i < 10; i++ )
+		{
+			// seleciona a forma com base na escolha do usuário
+			switch ( choice )
+			{
+				case 1: // desenha retângulos 
+					g.drawRect( 10 + i * 10, 10 + i * 10,
+							50 + i * 10, 50 + i * 10 );        
+					break;
+				case 2: // desenha elipses 
+					g.drawOval( 10 + i * 10, 10 + i * 10,
+							50 + i * 10, 50 + i * 10 );        
+					break;
+			} // switch final
+		} // for final
+	} // fim do método paintComponent
+} // fim da classe Shapes
 
 
 /**************************************************************************

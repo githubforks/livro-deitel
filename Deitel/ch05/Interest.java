@@ -1,34 +1,29 @@
-package ch03;
-//Fig. 3.7: GradeBook.java
-//classe GradeBook que contém uma variável de instância courseName
-//e métodos para configurar e obter seu valor.
+package ch05;
+//Fig. 5.6: Interest.java
+//Cálculos de juros compostos com for.
 
-public class GradeBook03_07
+public class Interest 
 {
-	private String courseName; // nome do curso para esse GradeBook
-
-	// método para configurar o nome do curso
-	public void setCourseName( String name )      
-	{                                             
-		courseName = name; // armazena o nome do curso
-	} // termina o método setCourseName
-
-	// método para recuperar o nome do curso
-	public String getCourseName()        
-	{                                    
-		return courseName;                
-	} // termina o método getCourseName
-
-	// exibe uma mensagem de boas-vindas para o usuário GradeBook
-	public void displayMessage()
+	public static void main( String args[] )
 	{
-		// essa instrução chama getCourseName para obter o
-		// nome do curso que esse GradeBook representa
-		System.out.printf( "Welcome to the grade book for\n%s!\n", 
-				getCourseName() );
-	} // termina o método displayMessage
+		double amount; // quantia em depósito ao fim de cada ano
+		double principal = 1000.0; // quantidade inicial antes dos juros
+		double rate = 0.05; // taxa de juros
 
-} // fim da classe GradeBook
+		// exibe cabeçalhos 
+		System.out.printf( "%s%20s \n", "Year", "Amount on deposit" );
+
+		// calcula quantidade de depósito para cada um dos dez anos
+		for ( int year = 1; year <= 10; year++ )             
+		{                                                    
+			// calcula nova quantidade durante ano especificado
+			amount = principal * Math.pow( 1.0 + rate, year );
+                                                        
+			// exibe o ano e a quantidade
+			System.out.printf( "%4d%,20.2f\n", year, amount );
+		} // for final
+	} // fim de main
+} // fim da classe Interest 
 
 
 /**************************************************************************

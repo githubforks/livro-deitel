@@ -1,34 +1,21 @@
-package ch03;
-//Fig. 3.7: GradeBook.java
-//classe GradeBook que contém uma variável de instância courseName
-//e métodos para configurar e obter seu valor.
+package ch05;
+//Fig. 5.10: GradeBookTest.Java
+//Cria o objeto GradeBook, insere notas e exibe relatório de notas.
 
-public class GradeBook03_07
+public class GradeBookTest
 {
-	private String courseName; // nome do curso para esse GradeBook
-
-	// método para configurar o nome do curso
-	public void setCourseName( String name )      
-	{                                             
-		courseName = name; // armazena o nome do curso
-	} // termina o método setCourseName
-
-	// método para recuperar o nome do curso
-	public String getCourseName()        
-	{                                    
-		return courseName;                
-	} // termina o método getCourseName
-
-	// exibe uma mensagem de boas-vindas para o usuário GradeBook
-	public void displayMessage()
+	public static void main( String args[] )
 	{
-		// essa instrução chama getCourseName para obter o
-		// nome do curso que esse GradeBook representa
-		System.out.printf( "Welcome to the grade book for\n%s!\n", 
-				getCourseName() );
-	} // termina o método displayMessage
+		// cria o objeto myGradeBookda classe GradeBook e
+		// passa o nome de cursor para o construtor
+		GradeBook myGradeBook = new GradeBook( 
+		"CS101 Introduction to Java Programming" );
 
-} // fim da classe GradeBook
+		myGradeBook.displayMessage(); // exibe a mensagem welcome
+		myGradeBook.inputGrades(); // lê as notas fornecidas pelo usuário
+		myGradeBook.displayGradeReport(); // exibe relatório baseado em notas
+	} // fim de main
+} // fim da classe GradeBookTest
 
 
 /**************************************************************************

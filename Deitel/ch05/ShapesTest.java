@@ -1,34 +1,31 @@
-package ch03;
-//Fig. 3.7: GradeBook.java
-//classe GradeBook que contém uma variável de instância courseName
-//e métodos para configurar e obter seu valor.
+package ch05;
+//Fig. 5.27: ShapesTest.java
+//Aplicativo de teste que exibe a classe Shapes.
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
-public class GradeBook03_07
+public class ShapesTest
 {
-	private String courseName; // nome do curso para esse GradeBook
-
-	// método para configurar o nome do curso
-	public void setCourseName( String name )      
-	{                                             
-		courseName = name; // armazena o nome do curso
-	} // termina o método setCourseName
-
-	// método para recuperar o nome do curso
-	public String getCourseName()        
-	{                                    
-		return courseName;                
-	} // termina o método getCourseName
-
-	// exibe uma mensagem de boas-vindas para o usuário GradeBook
-	public void displayMessage()
+	public static void main( String args[] )
 	{
-		// essa instrução chama getCourseName para obter o
-		// nome do curso que esse GradeBook representa
-		System.out.printf( "Welcome to the grade book for\n%s!\n", 
-				getCourseName() );
-	} // termina o método displayMessage
+		// obtém a escolha do usuário
+		String input = JOptionPane.showInputDialog(
+				"Enter 1 to draw rectangles\n" +
+		"Enter 2 to draw ovals" );
+   
+		int choice = Integer.parseInt( input ); // converte a entrada em int
 
-} // fim da classe GradeBook
+		// cria o painel com a entrada do usuário
+		Shapes panel = new Shapes( choice );
+   
+		JFrame application = new JFrame(); // cria um novo JFrame
+
+		application.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		application.add( panel ); // adiciona o painel ao frame
+		application.setSize( 300, 300 ); // configura o tamanho desejado
+		application.setVisible( true ); // mostra o frame
+	} // fim de main
+} // fim da classe ShapesTest 
 
 
 /**************************************************************************

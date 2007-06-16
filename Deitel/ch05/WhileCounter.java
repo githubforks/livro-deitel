@@ -1,34 +1,22 @@
-package ch03;
-//Fig. 3.7: GradeBook.java
-//classe GradeBook que contém uma variável de instância courseName
-//e métodos para configurar e obter seu valor.
+package ch05;
+//Fig. 5.1: WhileCounter.java
+//Repetição controlada por contador com a instrução de repetição while.
 
-public class GradeBook03_07
+public class WhileCounter 
 {
-	private String courseName; // nome do curso para esse GradeBook
+	public static void main( String args[] ) 
+	{      
+		int counter = 1; // declara e inicializa a variável de controle
 
-	// método para configurar o nome do curso
-	public void setCourseName( String name )      
-	{                                             
-		courseName = name; // armazena o nome do curso
-	} // termina o método setCourseName
+		while (counter <= 10) // condição de continuação do loop
+		{
+			System.out.printf( "%d  ", counter );
+			++counter; // incrementa a variável de controle por 1
+		} // fim do while
 
-	// método para recuperar o nome do curso
-	public String getCourseName()        
-	{                                    
-		return courseName;                
-	} // termina o método getCourseName
-
-	// exibe uma mensagem de boas-vindas para o usuário GradeBook
-	public void displayMessage()
-	{
-		// essa instrução chama getCourseName para obter o
-		// nome do curso que esse GradeBook representa
-		System.out.printf( "Welcome to the grade book for\n%s!\n", 
-				getCourseName() );
-	} // termina o método displayMessage
-
-} // fim da classe GradeBook
+		System.out.println(); // gera a saída de um caractere de nova linha
+	} // fim de main
+} // fim da classe WhileCounter 
 
 
 /**************************************************************************

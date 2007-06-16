@@ -1,34 +1,37 @@
-package ch03;
-//Fig. 3.7: GradeBook.java
-//classe GradeBook que contém uma variável de instância courseName
-//e métodos para configurar e obter seu valor.
+package ch02;
+//Ex. 2.6: Product.Java
+//Calcula o produto de três inteiros.
 
-public class GradeBook03_07
+import java.util.Scanner; // programa utiliza Scanner
+
+public class Product 
 {
-	private String courseName; // nome do curso para esse GradeBook
-
-	// método para configurar o nome do curso
-	public void setCourseName( String name )      
-	{                                             
-		courseName = name; // armazena o nome do curso
-	} // termina o método setCourseName
-
-	// método para recuperar o nome do curso
-	public String getCourseName()        
-	{                                    
-		return courseName;                
-	} // termina o método getCourseName
-
-	// exibe uma mensagem de boas-vindas para o usuário GradeBook
-	public void displayMessage()
+	public static void main( String args[] )
 	{
-		// essa instrução chama getCourseName para obter o
-		// nome do curso que esse GradeBook representa
-		System.out.printf( "Welcome to the grade book for\n%s!\n", 
-				getCourseName() );
-	} // termina o método displayMessage
+		// cria Scanner para obter entrada a partir da janela de comando
+		Scanner input = new Scanner( System.in );
 
-} // fim da classe GradeBook
+		int x; // primeiro número inserido pelo usuário
+		int y; // segundo número inserido pelo usuário
+		int z; // terceiro número inserido pelo usuário
+		int result; // produto dos números
+
+		System.out.print( "Enter first integer: " ); // solicita entrada
+		x = input.nextInt(); // lê o primeiro inteiro
+
+		System.out.print( "Enter second integer: " ); // solicita entrada
+		y = input.nextInt(); // lê o segundo inteiro
+
+		System.out.print( "Enter third integer: " ); // solicita entrada
+		z = input.nextInt(); // lê o terceiro inteiro
+
+		result = x * y * z; // calcula o produto dos números
+
+		System.out.printf( "Product is %d\n", result );
+
+	} // fim do método principal
+
+} // fim da classe Product
 
 
 /**************************************************************************
