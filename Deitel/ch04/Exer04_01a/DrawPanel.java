@@ -5,7 +5,6 @@ import javax.swing.JPanel;
 
 public class DrawPanel extends JPanel
 {
-	// desenha um X a partir dos cantos do painel
 	public void paintComponent( Graphics g )
 	{
 		// chama paintComponent para assegurar que o painel é exibido corretamente
