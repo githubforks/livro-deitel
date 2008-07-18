@@ -1,8 +1,8 @@
 /*
- * Utilizando apenas as técnicas de programação que você aprendeu neste capítulo, escreva um
- * aplicativo que calcula os quadrados e os cubos dos números de 0 a 10 e imprima os valores
+ * Utilizando apenas as tÃ©cnicas de programaÃ§Ã£o que vocÃª aprendeu neste capÃ­tulo, escreva um
+ * aplicativo que calcula os quadrados e os cubos dos nÃºmeros de 0 a 10 e imprima os valores
  * resultantes no formato de tabela como asseguir
- * número quadrado cubo
+ * nÃºmero quadrado cubo
  * 0      0        0
  * 1      1        1
  * 2      4        8
@@ -20,7 +20,7 @@ package ch02.Exer02_31;
 
 public class Exer02_31 {
 	public static void main(String[] args) {
-		System.out.println("número quadrado cubo");
+		System.out.println("nÃºmero quadrado cubo");
 		System.out.printf( "%d      %s      %s\n",0,Math.pow(0,2),Math.pow(0,3));
 		System.out.printf( "%d      %s      %s\n",1,Math.pow(1,2),Math.pow(1,3));
 		System.out.printf( "%d      %s      %s\n",2,Math.pow(2,2),Math.pow(2,3));

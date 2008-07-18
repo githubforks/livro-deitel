@@ -1,10 +1,10 @@
-//Parte do exercício 3.11
+//Parte do exercÃ­cio 3.11
 package ch03.Exer03_11;
 
 
 public class GradeBookTest {
 	public static void main(String[] args) {
-		GradeBook gb = new GradeBook("Java: Como Programar 6ª edição",
+		GradeBook gb = new GradeBook("Java: Como Programar 6 ediÃ§Ã£o",
 				"Deitel");
 		
 		gb.displayMessage();

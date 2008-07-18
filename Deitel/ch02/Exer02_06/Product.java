@@ -1,7 +1,12 @@
+/*
+ * 	Utilizando as instruÃ§Ãµes que vocÃª escreveu no ExercÃ­cio 2.5, escreva um programa
+ * completo que calcule e imprima o produto de trÃªs inteiros.
+ */
+
 package ch02.Exer02_06;
 
 //Ex. 2.6: Product.java
-//Calcula o produto de três inteiros
+//Calcula o produto de trï¿½s inteiros
 import java.util.Scanner;
 
 public class Product {
@@ -9,22 +14,22 @@ public class Product {
 		//cria um Scanner para obter entrada a partir da janela de comando
 		Scanner input = new Scanner(System.in);
 		
-		int x; //Primeiro número inserido pelo usuário
-		int y; //Segundo número inserido pelo usuário
-		int z; //Terceiro número inserido pelo usuário
+		int x; //Primeiro nÃºmero inserido pelo usuÃ¡rio
+		int y; //Segundo nÃºmero inserido pelo usuÃ¡rio
+		int z; //Terceiro nÃºmero inserido pelo usuÃ¡rio
 		int result; //Produto dos numeros
 		
 		System.out.println("Enter first integer:"); //Solicita entrada
-		x = input.nextInt(); //Lê o primeiro inteiro
+		x = input.nextInt(); //LÃª o primeiro inteiro
 		
 		System.out.println("Enter second integer:"); //Solicita entrada
-		y = input.nextInt(); //Lê o segundo inteiro
+		y = input.nextInt(); //LÃª o segundo inteiro
 		
 		System.out.println("Enter third integer:"); //Solicita entrada
-		z = input.nextInt(); //Lê o terceiro inteiro
+		z = input.nextInt(); //LÃª o terceiro inteiro
 		
-		result = x*y*z; //Calcula o produto dos números
+		result = x*y*z; //Calcula o produto dos nÃºmeros
 		
 		System.out.printf("Product is %d\n", result);
-	}//Fim do método orincipal
+	}//Fim do mÃ©todo orincipal
 }//Fim da classe product

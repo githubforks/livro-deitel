@@ -1,3 +1,9 @@
+/*
+ * Escreva um aplicativo que lÃª um inteiro e determina e imprime se ele Ã© impar ou par.
+ * [Dica: Utilize o operador de mÃ³dulo. Um nÃºmero par Ã© um mÃºltiplo de 2. Qualquer mÃºltiplo
+ * de 2 deixa um resto 0 quando dividido por 2.]
+ */
+
 package ch02.Exer02_25;
 
 import java.util.Scanner;
@@ -11,7 +17,7 @@ public class Exer02_25 {
 		n = input.nextInt();
 		
 		if (n%2 == 0)
-			System.out.println("O número é par.");
-		else System.out.println("O número é impar.");
+			System.out.println("O nï¿½mero ï¿½ par.");
+		else System.out.println("O nï¿½mero ï¿½ impar.");
 	}
 }

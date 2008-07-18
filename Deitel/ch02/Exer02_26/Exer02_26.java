@@ -1,3 +1,8 @@
+/*
+ * Escreva um aplicativo que lÃª dois inteiros, determina se o primeiro Ã© mÃºltiplo do segundo
+ * e imprime o resultado. [Dica: Utilize o operador de mÃ³dulo.]
+ */
+
 package ch02.Exer02_26;
 
 import java.util.Scanner;
@@ -13,8 +18,8 @@ public class Exer02_26 {
 		n2 = input.nextInt();
 
 		if (n1%n2==0)
-			System.out.println("n1 é múltiplo de n2");
+			System.out.println("n1 Ã© mÃºltiplo de n2");
 		else
-			System.out.println("n1 não é múltiplo de n2");
+			System.out.println("n1 nÃ£o Ã© mÃºltiplo de n2");
 	}
 }

@@ -1,7 +1,7 @@
 /*
- * Combine as instruções escritas no exercício 4.5 em um aplicativo
+ * Combine as instruÃ§Ãµes escritas no exercÃ­cio 4.5 em um aplicativo
  * Java que calvula e imprime a soma dos inteiros de 1 a 10. Utilize
- * a instrução while para fazer loop pelas instruções de cálculo e
+ * a instruÃ§Ã£o while para fazer loop pelas instruÃ§Ãµes de cÃ¡lculo e
  * incremento. O loop deve terminar quando  o valor de x tornar-se 11.
  */
 
@@ -18,6 +18,6 @@ public class Calculate {
 			sum += x++;
 			//++x;
 		}
-		System.out.println("A soma é: " + sum);
+		System.out.println("A soma Ã©: " + sum);
 	}
 }

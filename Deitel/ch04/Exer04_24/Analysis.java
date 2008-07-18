@@ -1,3 +1,9 @@
+/*
+ * Modifique o programa na Figura 4.12 para validar suas entradas. Para qualquer entrada, se
+ * o valor entrado for diferente de 1 ou 2, continue o loop atÃ© o usuÃ¡rio inserir um valor
+ * correto.
+ */
+
 package ch04.Exer04_24;
 
 import java.util.Scanner; // classe utiliza a classe Scanner
@@ -9,18 +15,18 @@ public class Analysis
       // cria Scanner para obter entrada a partir da janela de comando
       Scanner input = new Scanner( System.in );
 
-      // inicializando variáveis nas declarações
-      int passes = 0; // número de aprovações
-      int failures = 0; // número de reprovações
+      // inicializando variÃ¡veis nas declaraÃ§Ãµees
+      int passes = 0; // nÃºmero de aprovaÃ§Ãµes
+      int failures = 0; // nÃºmero de reprovaÃ§Ãµes
       int studentCounter = 1; // contador de alunos
-      int result; // um resultado do exame (obtém o valor a partir do usuário)
+      int result; // um resultado do exame (obtÃ©m o valor a partir do usuÃ¡rio)
 
       // processa 10 alunos utilizando o loop controlado por contador
       while ( studentCounter <= 10 ) 
       {
     	  result = 0;
 
-    	 // solicita ao usuário uma entrada e obtém valor fornecido pelo usuário
+    	 // solicita ao usuÃ¡rio uma entrada e obtÃ©m valor fornecido pelo usuÃ¡rio
          System.out.print( "Enter result (1 = pass, 2 = fail): " );
 
          while ((result != 1) && (result!=2)){
@@ -31,20 +37,20 @@ public class Analysis
 
          // if...else aninhado em while
          if ( result == 1 )          // if resultar 1,
-            passes = passes + 1;     // incrementa aprovações;
-         else                        // else resultado não é 1, então
-            failures = failures + 1; // incrementa reprovações
+            passes = passes + 1;     // incrementa aprovaÃ§Ãµes;
+         else                        // else resultado nÃ£o Ã© 1, entÃ£o
+            failures = failures + 1; // incrementa reprovaÃ§Ãµes
 
-         // incrementa studentCounter até o loop terminar
+         // incrementa studentCounter atÃ© o loop terminar
          studentCounter = studentCounter + 1;  
       } // fim do while
 
-      // fase de término; prepara e exibe os resultados
+      // fase de tÃ©rmino; prepara e exibe os resultados
       System.out.printf( "Passed: %d\nFailed: %d\n", passes, failures );
 
       // determina se mais de 8 alunos foram aprovados
       if ( passes > 8 )
          System.out.println( "Raise Tuition" );
-   } // fim do método processExamResults
+   } // fim do mÃ©todo processExamResults
 
 } // fim da classe Analysis

@@ -1,6 +1,6 @@
 package ch04.Exer04_23;
 
-//Procura se j· n„o existe um valor em um dado vetor
+//Procura se j√° n√£o existe um valor em um dado vetor
 
 public class Busca {
 	public boolean busca(int[] v, int ultimo, int valor){

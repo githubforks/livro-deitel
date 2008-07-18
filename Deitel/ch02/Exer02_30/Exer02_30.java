@@ -1,7 +1,7 @@
 /*
- * Escrva um aplicativo que insere um número consistindo em cinco dígitos do usuário, separe
- * o número em seus dígitos individuais e imprima os dígitos separados uns dos outros por
- * três espaços cada. Por exemplo, se o úsuário digitar 42339, o programa deve imprimir
+ * Escrva um aplicativo que insere um nÃºmero consistindo em cinco dÃ­gitos do usuÃ¡rio, separe
+ * o nÃºmero em seus dÃ­gitos individuais e imprima os dÃ­gitos separados uns dos outros por
+ * trÃªs espaÃ§os cada. Por exemplo, se o usuÃ¡rio digitar 42339, o programa deve imprimir
  * 4   2   3   3   9
  */
 
@@ -14,7 +14,7 @@ public class Exer02_30 {
 		Scanner input = new Scanner(System.in);
 		int n;
 		
-		System.out.print("Digite um numero:");
+		System.out.print("Digite um nÃºmero:");
 		n = input.nextInt();
 
 		System.out.print((n/10000)%10+"   ");

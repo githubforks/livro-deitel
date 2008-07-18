@@ -19,7 +19,7 @@ public class LeVetor {
 				temp = input.nextInt();
 				boo = b.busca(vetor, ultimo-1, temp);
 				if (boo == true)
-					System.out.println("Numero j· existe no vetor.");
+					System.out.println("Numero j√° existe no vetor.");
 				else vetor[ultimo]=temp;
 			}
 			ultimo++;

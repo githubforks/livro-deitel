@@ -1,4 +1,4 @@
-//Parte do exercício 3.12
+//Parte do exercÃ­cio 3.12
 package ch03.Exer03_12;
 
 import java.util.Scanner;
