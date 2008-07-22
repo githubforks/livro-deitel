@@ -14,7 +14,7 @@ public class Exer02_30 {
 		Scanner input = new Scanner(System.in);
 		int n;
 		
-		System.out.print("Digite um número:");
+		System.out.print("Digite um número com 5 dígitos:");
 		n = input.nextInt();
 
 		System.out.print((n/10000)%10+"   ");

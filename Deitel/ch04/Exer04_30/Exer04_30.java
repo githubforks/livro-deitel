@@ -9,7 +9,7 @@
  * P.S.: Não identifica, por exemplo, 00100.
  */
 
-package ch04.Exer04_30_Rever;
+package ch04.Exer04_30;
 
 import java.util.Scanner;
 
