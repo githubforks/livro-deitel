@@ -2,8 +2,10 @@
 package ch03.Exer03_14;
 
 
-public class EmployeeTest {
-	public static void main(String[] args) {
+public class EmployeeTest
+{
+	public static void main(String[] args)
+	{
 		Employee e1,e2;
 		
 		e1 = new Employee("Márcio","Leal",100.0);

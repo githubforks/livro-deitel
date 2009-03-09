@@ -4,8 +4,10 @@ package ch03.Exer03_12;
 import java.util.Scanner;
 
 
-public class AccountTest{
-	public static void main( String args[] ) {
+public class AccountTest
+{
+	public static void main( String args[] )
+	{
 		Account account1 = new Account( 50.00 );
 		Account account2 = new Account( -7.53 );
 

@@ -29,12 +29,11 @@ public class DrawPanel extends JPanel
 		int somaWidth = 0;
 		int somaHeight = 0;
 
-		for (int i = 0; i <= 15; i++) {
-
+		for (int i = 0; i <= 15; i++)
+		{
 			somaWidth += getWidth()/15;
 			g.drawLine( 0, somaHeight, somaWidth, getHeight() );
 			somaHeight += getHeight()/15;
-
 		}
 	} // fim do método paintComponent
 } // fim da classe DrawPanel

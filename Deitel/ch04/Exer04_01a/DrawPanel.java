@@ -9,7 +9,7 @@
  * linha sempre estará no canto superior esquerdo (0,0). A segunda extremidade pode ser
  * encontrada iniciando no canto inferior esquerdo e movendo-se para cima um passo vertical
  * e para a direita um passo horizontal. Desenhe uma linha entre as duas extremidades.
- * Continue movendo-se para cima e para à direita para encontrar daca extremidade sucessiva.
+ * Continue movendo-se para cima e para à direita para encontrar cada extremidade sucessiva.
  * A figura deve ser dimensionada de maneira correspondente à medida que você redimencionar
  * a janela.
  * 
@@ -34,7 +34,8 @@ public class DrawPanel extends JPanel
 		int height = getHeight()/2; // altura total
 		g.drawLine( 0, 0, width, height );
 
-		for (int i = 1; i <= 7; i++) {
+		for (int i = 1; i <= 7; i++)
+		{
 
 			width = width + getWidth()/15;
 			height = height - getHeight()/15;

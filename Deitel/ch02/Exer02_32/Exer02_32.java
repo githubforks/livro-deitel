@@ -7,8 +7,10 @@ package ch02.Exer02_32;
 
 import java.util.Scanner;
 
-public class Exer02_32 {
-	public static void main(String[] args) {
+public class Exer02_32
+{
+	public static void main(String[] args)
+	{
 		Scanner input = new Scanner(System.in);
 		int n=0, pos=0, neg=0, zeros=0;
 		

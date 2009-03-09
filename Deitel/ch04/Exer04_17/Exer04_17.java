@@ -17,9 +17,10 @@ package ch04.Exer04_17;
 
 import java.util.Scanner;
 
-public class Exer04_17 {
-
-	public static void main(String[] args) {
+public class Exer04_17
+{
+	public static void main(String[] args)
+	{
 		int km,litros,kmTotal,litrosTotal;
 		Scanner input = new Scanner(System.in);
 		Func f = new Func();
@@ -28,7 +29,8 @@ public class Exer04_17 {
 		kmTotal = 0;
 		litrosTotal = 0;
 		
-		do{
+		do
+		{
 			System.out.print("Digite a quilometragem (-1 para sair): ");
 			km = input.nextInt();
 			if(km>=0){

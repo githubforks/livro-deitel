@@ -1,15 +1,17 @@
 /*
- * Escreva um aplicativo que solicita ao usuário inserir dois inteiros, obtém do usuário
- * esses números e imprime sua soma, produto, diferença e quociente (divisão). Utilize
- * as técnicas mostradas na Figura 2.7.
+ * Escreva um aplicativo que solicita ao usuário inserir dois inteiros, obtém do
+ * usuário esses números e imprime sua soma, produto, diferença e quociente
+ * (divisão). Utilize as técnicas mostradas na Figura 2.7.
  */
 
 package ch02.Exer02_15;
 
 import java.util.Scanner;
 
-public class Exer02_15 {
-	public static void main(String[] args) {
+public class Exer02_15
+{
+	public static void main(String[] args)
+	{
 		Scanner input = new Scanner( System.in );
 		
 		int numero1, numero2, soma, produto, diferenca, divisao;		
@@ -25,6 +27,6 @@ public class Exer02_15 {
 		divisao = numero1/numero2;
 		
 		System.out.printf("Soma = %d, Produto = %d, Diferenca = %d, Divisao = %d", 
-				soma,produto,diferenca, divisao);
+				soma, produto, diferenca, divisao);
 	}
 }

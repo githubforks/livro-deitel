@@ -1,7 +1,7 @@
 /*
  * Uma grande empresa paga seu pessoal de vendas com base em comissões. O pessoal de vendas
  * recebe $200 por semana mais 9% de suas vendas brutas durante essa semana. Por exemplo,
- * um vendedor que realiza um total de vendas de mercadorias de $5000 em uma semana receve
+ * um vendedor que realiza um total de vendas de mercadorias de $5000 em uma semana recebe
  * $200 mais 9% de $5000 ou um valor total de $650. Foi-lhe  fornecida uma lista dos itens
  * dos itens vendidos por cada vendedor. Os valores desses itens itens são como segue:
  *							Item    Value
@@ -18,10 +18,10 @@ package ch04.Exer04_19;
 
 import java.util.Scanner;
 
-public class Exer04_19 {
-
-	public static void main(String[] args) {
-
+public class Exer04_19
+{
+	public static void main(String[] args)
+	{
 		Scanner input = new Scanner(System.in);
 		int item = 0;
 		float salario = 200, vendas = 0;
@@ -35,8 +35,10 @@ public class Exer04_19 {
 		while (item != -1){
 			System.out.println("Digite o novo item (-1 para FIM):");
 			item = input.nextInt();
-				if (item != -1){
-					switch (item) {
+				if (item != -1)
+				{
+					switch (item)
+					{
 						case 1:
 							vendas += 239.99;
 							break;
@@ -57,6 +59,5 @@ public class Exer04_19 {
 		}
 		salario += vendas * 0.09;
 		System.out.println("Salário Final = " + salario);
-
 	}
 }
