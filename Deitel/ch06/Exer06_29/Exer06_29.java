@@ -8,8 +8,51 @@
  * deve aparecer aproximadamente metade das vezes. ]
  */
 
+
 package ch06.Exer06_29;
 
-public class Exer06_29 {
+import java.util.Random;
+import java.util.Scanner;
 
+public class Exer06_29 {
+	public boolean flip()
+	{
+		boolean b;
+		Random random = new Random();
+		
+		b = ( random.nextInt( 2 ) == 1 ? true : false );
+		
+		return b;
+	}
+	
+	public static void main ( String args[] )
+	{
+		Exer06_29 exer = new Exer06_29();
+		Scanner input = new Scanner( System.in );
+		int opcao = 1, cara = 0, coroa = 0;
+		boolean moeda;
+		
+		while( opcao != 0 )
+		{
+			System.out.print("0 - Exit\n1 - Toss Coin\nEnter your option: ");
+			opcao = input.nextInt();
+			
+			if ( opcao == 1)
+			{
+				moeda = exer.flip();
+				
+				if ( moeda )
+				{
+					System.out.println("Cara");
+					cara++;
+				}
+				else
+				{
+					System.out.println("Coroa");
+					coroa++;
+				}
+			}
+		}
+		System.out.println("Cara: " + cara + "\nCoroa: " + coroa);
+	}
 }
