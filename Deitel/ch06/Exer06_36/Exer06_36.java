@@ -11,28 +11,24 @@ import java.util.Scanner;
 
 public class Exer06_36
 {
-	public double distance ( Pontos arg0, Pontos arg1)
+	public double distance ( int x1, int y1, int x2, int y2)
 	{
-		double dist = 0.0;
-		
-		return dist;
+		return Math.sqrt( Math.pow( ( x1-x2 ), 2 ) + Math.pow( ( y1-y2 ), 2 ) );
 	}
 	public static void main(String[] args) {
 		Scanner input = new Scanner( System.in );
 		Exer06_36 exer = new Exer06_36();
-		Pontos p1;
-		
-		p = new Pontos();
-		
+		int x1, x2, y1, y2;
+
 		System.out.print("x1: ");
-		p.setX1( input.nextDouble() );
+		x1 = input.nextInt();
 		System.out.print("y1: ");
-		p.setY1( input.nextDouble() );
+		y1 = input.nextInt();
 		System.out.print("x2: ");
-		p.setX2( input.nextDouble() );
+		x2 = input.nextInt();
 		System.out.print("y2: ");
-		p.setY2li( input.nextDouble() );
+		y2 = input.nextInt();
 		
-		
+		System.out.println( exer.distance(x1, y1, x2, y2) );
 	}
 }

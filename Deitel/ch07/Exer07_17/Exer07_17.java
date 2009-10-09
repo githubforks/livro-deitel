@@ -30,6 +30,27 @@
 
 package ch07.Exer07_17;
 
-public class Exer07_17 {
+import java.util.Random;
 
+public class Exer07_17
+{
+	public static void main( String[] args )
+	{
+		Random random = new Random();
+		int dado1, dado2, indice;
+		int[] frequencia = new int[11];
+		
+		for( int i = 1; i <= 65000; i++ )
+		{
+			dado1 = random.nextInt( 6 );
+			dado2 = random.nextInt( 6 );
+
+			indice = ( dado1 + dado2 );
+			
+			frequencia[ indice ]++;
+		}
+		
+		for( int i = 0; i < 11; i++ )
+			System.out.println( ( i+2 ) + " : " + frequencia[ i ] );
+	}
 }

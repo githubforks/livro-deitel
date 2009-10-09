@@ -18,10 +18,7 @@
 
 package ch07.Exer07_25;
 
-/**
- *
- * @author marcio
- */
-public class Exer07_25 {
+public class Exer07_25
+{
 
 }

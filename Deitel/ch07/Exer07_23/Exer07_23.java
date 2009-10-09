@@ -37,6 +37,45 @@
 
 package ch07.Exer07_23;
 
-public class Exer07_23 {
-
+public class Exer07_23
+{
+	public static void main(String[] args)
+	{
+		int horizontal[] = {  2,  1, -1, -2, -2, -1, 1, 2 };
+		int vertical[]   = { -1, -2, -2, -1,  1,  2, 2, 1 };
+		int currentRow = 3, currentColumn = 4;
+		int nMoviments = 1; // número de casas visitadas pelo cavalo
+		int moveNumber = 0;
+		int board[][] = new int[8][8];
+		int[][] heuristic =
+		{
+				{2,3,4,4,4,4,3,2},
+				{3,4,6,6,6,6,4,3},	
+				{4,6,8,8,8,8,6,4},
+				{4,6,8,8,8,8,6,4},
+				{4,6,8,8,8,8,6,4},
+				{4,6,8,8,8,8,6,4},
+				{3,4,6,6,6,6,4,3},
+				{2,3,4,4,4,4,3,2}
+		};
+		
+		// Passa posição inicial para o tabuleiro
+		board[currentRow][currentColumn] = nMoviments;
+		
+		while ( nMoviments <= 64 )
+		{
+			
+			nMoviments++;
+		}
+		
+		for (int i = 0; i < board.length; i++)
+		{
+			System.out.print( "|" );
+			for (int j = 0; j < board.length; j++)
+				if ( board[i][j] < 10 )
+					System.out.print( " " + board[i][j] + "|");
+				else System.out.print( board[i][j] + "|" );
+			System.out.println();
+		}
+	}
 }

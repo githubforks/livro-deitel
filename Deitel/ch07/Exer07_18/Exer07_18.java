@@ -5,7 +5,7 @@
  *      a) Quantos jogos são ganhos na primeira rolagem, segunda rolagem, ...,
  *      vigésima rolagem e depois da vigésima rolagem ?
  *
- *      b) Quntos jogos são perdidos na primeira rolagem, segunda rolagem, ...,
+ *      b) Quantos jogos são perdidos na primeira rolagem, segunda rolagem, ...,
  *      vigésima rolagem e depois da vigésima rolagem ?
  *
  *      c) Quais são as chances de ganhar no jogo de dados ? [Nota: Você deve
@@ -19,6 +19,19 @@
 
 package ch07.Exer07_18;
 
-public class Exer07_18 {
-
+public class Exer07_18
+{
+	public static void main(String[] args)
+	{
+		int wins = 0, looses = 0;
+		Craps craps = new Craps();
+		
+		for (int i = 0; i < 1000; i++)
+			if ( craps.play() )
+				wins++;
+			else looses++;
+		
+		System.out.println("Vitórias: " + wins);
+		System.out.println("Derrotas: " + looses);
+	}
 }

@@ -26,6 +26,7 @@
 
 package ch07.Exer07_27;
 
-public class Exer07_27 {
+public class Exer07_27
+{
 
 }

@@ -25,29 +25,6 @@ public class Exer06_35
 {
 	public static void main( String args[] )
 	{
-		/*
-		char	c = 'A';	Character	C = new Character( 'A' );
-		int		in =  1;	Integer		In = new Integer( 1 );
-		boolean	b = true;	Boolean		B = new Boolean( true );
-		byte	by = 0101;	Byte		By = new Byte( (byte) 0101 );
-		short	s = 1;		Short		S = new Short( (short) 1 );
-		long	l = 1;		Long		L = new Long( 1 );
-		double	d = 1.0;	Double		D = new Double( 1.0 );
-		
-		d = Double.parseDouble( "1.0" );
-		
-		for (int i = 0; i < args.length; i++)
-		{
-			while(true)
-				String i;
-				
-		}
-		for (int i = 0; i < args.length; i++)
-		{
-			
-		}
-		*/
-		
 		Scanner input = new Scanner( System.in );
 		Gerador gerador = new Gerador();
 		Random random = new Random();

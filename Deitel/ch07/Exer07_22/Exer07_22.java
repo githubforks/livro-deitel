@@ -41,21 +41,21 @@
  *         oito movimentos possíveis em termos de seus componentes vertical e
  *         horizontal. Por exemplo, um movimento do tipo 0 como mostrado na
  *         Figura 7.32 consiste em mover dois quadrados horizontalmente para a
- *         direita e um quadrado certicalmente para cima. Um movimento do tipo
+ *         direita e um quadrado verticalmente para cima. Um movimento do tipo
  *         2 consiste em mover um quadrado horizontalmente para a esquerda e dois
  *         quadrados e dois quadrados verticalmente para cima. Movimentos horizontais
  *         para a esquerda e movimentos verticais para cima são indicados com
- *         números negativos. Os oitos movimentos podes ser descritos pois dois
- *         arrays unidimensionais, 'horizontal' e 'vertocal', como segue:
+ *         números negativos. Os oitos movimentos podem ser descritos por dois
+ *         arrays unidimensionais, 'horizontal' e 'vertical', como segue:
  *
- *                  horizontal[ 0 ] = 2         vertical[ 0 ] = -1
- *                  horizontal[ 1 ] = 1         vertical[ 1 ] = -2
+ *                  horizontal[ 0 ] =  2        vertical[ 0 ] = -1
+ *                  horizontal[ 1 ] =  1        vertical[ 1 ] = -2
  *                  horizontal[ 2 ] = -1        vertical[ 2 ] = -2
  *                  horizontal[ 3 ] = -2        vertical[ 3 ] = -1
- *                  horizontal[ 4 ] = -2        vertical[ 4 ] = 1
- *                  horizontal[ 5 ] = -1        vertical[ 5 ] = 2
- *                  horizontal[ 6 ] = 1         vertical[ 6 ] = 2
- *                  horizontal[ 7 ] = 2         vertical[ 7 ] = 1
+ *                  horizontal[ 4 ] = -2        vertical[ 4 ] =  1
+ *                  horizontal[ 5 ] = -1        vertical[ 5 ] =  2
+ *                  horizontal[ 6 ] =  1        vertical[ 6 ] =  2
+ *                  horizontal[ 7 ] =  2        vertical[ 7 ] =  1
  *
  *         Faça com que as variáveis currentRow e currentColumn indiquem,
  *         respectivamente, a linha e a coluna da posição atual do cavalo. Para
@@ -106,7 +106,7 @@
  *              Escreva uma versão do passeio do cavalo utilizando a heurística
  *         de acessibilidade. O cavalo sempre deve mover-se para o quadrado com
  *         o número de acessibilidade mais baixo. Em caso de um impasse, o
- *         cavalo pode mover-se para qualque quadrado já visitado. Portanto, o
+ *         cavalo pode mover-se para qualquer quadrado já visitado. Portanto, o
  *         passeio pode começar em qualquer um dos quatro cantos. [Nota: À medida
  *         que o cavalo se move pelo tabuleiro de xadrez, seu aplicativo deve
  *         reduzir os números de acessibilidade conforme mais quadrados se tornam
@@ -128,6 +128,45 @@
 
 package ch07.Exer07_22;
 
-public class Exer07_22 {
-
+public class Exer07_22
+{
+	public static void main(String[] args)
+	{
+		int horizontal[] = {  2,  1, -1, -2, -2, -1, 1, 2 };
+		int vertical[]   = { -1, -2, -2, -1,  1,  2, 2, 1 };
+		int currentRow = 3, currentColumn = 4;
+		int nMoviments = 1; // número de casas visitadas pelo cavalo
+		int moveNumber = 0;
+		int board[][] = new int[8][8];
+		int[][] heuristic =
+		{
+				{2,3,4,4,4,4,3,2},
+				{3,4,6,6,6,6,4,3},	
+				{4,6,8,8,8,8,6,4},
+				{4,6,8,8,8,8,6,4},
+				{4,6,8,8,8,8,6,4},
+				{4,6,8,8,8,8,6,4},
+				{3,4,6,6,6,6,4,3},
+				{2,3,4,4,4,4,3,2}
+		};
+		
+		// Passa posição inicial para o tabuleiro
+		board[currentRow][currentColumn] = nMoviments;
+		
+		while ( nMoviments <= 64 )
+		{
+			
+			nMoviments++;
+		}
+		
+		for (int i = 0; i < board.length; i++)
+		{
+			System.out.print( "|" );
+			for (int j = 0; j < board.length; j++)
+				if ( board[i][j] < 10 )
+					System.out.print( " " + board[i][j] + "|");
+				else System.out.print( board[i][j] + "|" );
+			System.out.println();
+		}
+	}
 }
