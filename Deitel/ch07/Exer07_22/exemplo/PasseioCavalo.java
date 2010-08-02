@@ -1,4 +1,4 @@
-package ch07.Exer07_22;
+package ch07.Exer07_22.exemplo;
 
 // Programa que resolve o algoritmo problema do passeio do cavalo por Heuristica de acessibilidade
 //pg 290

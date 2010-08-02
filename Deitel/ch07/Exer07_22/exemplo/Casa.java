@@ -1,4 +1,4 @@
-package ch07.Exer07_22;
+package ch07.Exer07_22.exemplo;
 
 public class Casa
 {

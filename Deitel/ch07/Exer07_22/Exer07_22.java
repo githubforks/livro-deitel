@@ -88,7 +88,7 @@
  *              Poderíamos desenvolver uma 'acessibilidade heurística'
  *         classificando cada um dos quadrados de acordo com seu grau de
  *         acessibilidade e então sempre movendo o cavalo (utilizando os
- *         movimentos em forma de L) para o quadrado mais incessível. Rotulamos
+ *         movimentos em forma de L) para o quadrado mais inacessível. Rotulamos
  *         um array bidimensional 'accessibility' com números indicando apartir
  *         de quantos quadrados cada quadrado particular é acessível. Em um
  *         tabuleiro vazio, cada um dos 16 quadrados mais próximos do centro é
@@ -130,43 +130,115 @@ package ch07.Exer07_22;
 
 public class Exer07_22
 {
-	public static void main(String[] args)
-	{
-		int horizontal[] = {  2,  1, -1, -2, -2, -1, 1, 2 };
-		int vertical[]   = { -1, -2, -2, -1,  1,  2, 2, 1 };
-		int currentRow = 3, currentColumn = 4;
-		int nMoviments = 1; // número de casas visitadas pelo cavalo
-		int moveNumber = 0;
-		int board[][] = new int[8][8];
-		int[][] heuristic =
-		{
-				{2,3,4,4,4,4,3,2},
-				{3,4,6,6,6,6,4,3},	
-				{4,6,8,8,8,8,6,4},
-				{4,6,8,8,8,8,6,4},
-				{4,6,8,8,8,8,6,4},
-				{4,6,8,8,8,8,6,4},
-				{3,4,6,6,6,6,4,3},
-				{2,3,4,4,4,4,3,2}
-		};
-		
-		// Passa posição inicial para o tabuleiro
-		board[currentRow][currentColumn] = nMoviments;
-		
-		while ( nMoviments <= 64 )
-		{
-			
-			nMoviments++;
-		}
-		
-		for (int i = 0; i < board.length; i++)
-		{
-			System.out.print( "|" );
-			for (int j = 0; j < board.length; j++)
-				if ( board[i][j] < 10 )
-					System.out.print( " " + board[i][j] + "|");
-				else System.out.print( board[i][j] + "|" );
-			System.out.println();
-		}
-	}
+    public static void main(String[] args)
+    {
+        int movesHistory[] = new int[64]; // Registra os histórico de movimentos
+        int visit[] = new int[8]; // Registra os possíveis próximos movimentos
+        int horizontal[] = {   2,  1, -1, -2, -2, -1, 1, 2};
+        int vertical[]   = {  -1, -2, -2, -1,  1,  2, 2, 1};
+        int currentRow = 4, currentColumn = 4;
+        int moveNumber = 1;
+        int board[][] = new int[8][8];
+        int[][] accessibility =
+        {
+            {2,3,4,4,4,4,3,2},
+            {3,4,6,6,6,6,4,3},
+            {4,6,8,8,8,8,6,4},
+            {4,6,8,8,8,8,6,4},
+            {4,6,8,8,8,8,6,4},
+            {4,6,8,8,8,8,6,4},
+            {3,4,6,6,6,6,4,3},
+            {2,3,4,4,4,4,3,2}
+        };
+
+        // inicializa tabuleiro com -1
+        for ( int i = 0; i <= 7; i++ )
+            for ( int j = 0; j <= 7; j++ )
+                board[i][j] = -1;
+
+        // Marca posição inicial no tabuleiro
+        board[currentRow][currentColumn] = moveNumber;
+//        for(int i=0; i<=7; i++)
+//        {
+//        	for(int j=0; j<=7; j++)
+//        		System.out.print(board[i][j]<0? + board[i][j]+"|" : board[i][j]+" |");
+//        	System.out.println();
+//        }
+
+        while ( moveNumber < 64 ) // 63 movimentos no tabuleiro
+        {
+            // (Re)inicializa o vetor de próximos movimentos possíveis
+            for ( int i = 0; i <= 7; i++ )
+                visit[i] = -1;
+
+            // Verifica jogadas possíveis para o cavalo
+            int counter = 0;
+            for(int i = 0; i <= 7; i++)
+                if( (currentRow + horizontal[i] >= 0) && (currentRow + horizontal[i] <= 7)) // Verifica se não está fora da linha
+                    if((currentColumn + vertical[i] >= 0) && (currentColumn + vertical[i] <= 7)) // Verifica se não está fora da coluna
+                        if (board[currentRow + horizontal[i]][currentColumn + vertical[i]] == -1) // Verifica se ainda não foi visitado
+                            visit[counter++] = i;
+
+            for(int i = 0; i <= 7; i++)
+            	System.out.print(visit[i]);
+            System.out.println();
+            
+            if (visit[0]>-1) // Se existe pelo menos uma jogada possível
+            {
+                // Ordena vetor de jogadas possíveis segundo matriz accessibility
+                boolean change = true; // Define change como true para entrar no loop abaixo
+                while ( change ) // Enquanto houver troca
+                {
+                    change = false; // Ainda não houve trocas nesta rodada
+
+                    for( int i = 1; i <= 7; i++ )
+                    {
+                        if( visit[i] > -1 )
+                        {
+                            int line = currentRow+horizontal[visit[i]];
+                            int column = currentColumn+vertical[visit[i]];
+                            int line_1 = currentRow+horizontal[visit[i-1]];
+                            int column_1 = currentColumn+vertical[visit[i-1]];
+                            if( accessibility[line][column] < accessibility[line_1][column_1] )
+                            {
+                                int x = visit[i];
+                                visit[i] = visit[i-1];
+                                visit[i-1] = x;
+                                change = true;
+                            }
+                        }
+                    }
+                    
+                    for(int i = 0; i <= 7; i++)
+                    	System.out.print(visit[i]);
+                    System.out.println();
+                }
+                board[currentRow][currentColumn] = moveNumber;
+                moveNumber++;
+                currentRow = currentRow + horizontal[visit[0]] ;
+                currentColumn = currentColumn + vertical[visit[0]];
+                movesHistory[moveNumber] = visit[0];
+            }
+            else // se não houver jogadas possíveis, faz RollBack
+            {break;}
+        }
+
+
+/*
+        for(int i = 0; i < visit.length; i++)
+            System.out.print(visit[i] + " |");
+        System.out.println("\n");
+*/
+        // Imprime tabuleiro final
+        System.out.println(moveNumber);
+        for (int i = 0; i < 8; i++)
+        {
+            System.out.print( "|" );
+            for (int j = 0; j < board.length; j++)
+                if ( board[i][j] < 10 && board[i][j] > -1)
+            System.out.print( " " + board[i][j] + "|");
+            else System.out.print( board[i][j] + "|" );
+            System.out.println();
+        }
+    }
 }

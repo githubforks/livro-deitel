@@ -1,5 +1,5 @@
 /*
- * (Embaralhamento e distribuição) Modifique o aplicativo na Figura 7.11 pars
+ * (Embaralhamento e distribuição) Modifique o aplicativo na Figura 7.11 para
  * distribuir uma mão de cinco cartas de pôker. Então modifique a classe
  * deckOfCards da Figura 7.10 para incluir métodos que determinam se um mão contém
  *

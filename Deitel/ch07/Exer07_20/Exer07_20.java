@@ -42,7 +42,7 @@ public class Exer07_20
 		{
 			System.out.print( "Nro. do Vendedor: [1-4] " );
 			vendedor = input.nextInt();
-			if( vendedor >= 1 && vendedor <= 5 )
+			if( vendedor >= 1 && vendedor <= 4 )
 			{
 				System.out.print( "Produto: [1-5] " );
 				produto = input.nextInt();
