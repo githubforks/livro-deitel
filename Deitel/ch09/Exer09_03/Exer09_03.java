@@ -10,6 +10,7 @@
 
 package ch09.Exer09_03;
 
-public class Exer09_03 {
+public class Exer09_03
+{
 
 }

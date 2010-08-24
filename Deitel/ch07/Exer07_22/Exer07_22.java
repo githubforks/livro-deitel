@@ -132,12 +132,15 @@ public class Exer07_22
 {
     public static void main(String[] args)
     {
+for(int k=0; k<8; k++)
+for(int l=0; l<8; l++)
+{
         int movesHistory[] = new int[64]; // Registra os histórico de movimentos
         int visit[] = new int[8]; // Registra os possíveis próximos movimentos
         int horizontal[] = {   2,  1, -1, -2, -2, -1, 1, 2};
         int vertical[]   = {  -1, -2, -2, -1,  1,  2, 2, 1};
-        int currentRow = 4, currentColumn = 4;
-        int moveNumber = 1;
+        int currentRow = k, currentColumn = l;
+        int moveNumber = 0;
         int board[][] = new int[8][8];
         int[][] accessibility =
         {
@@ -158,14 +161,8 @@ public class Exer07_22
 
         // Marca posição inicial no tabuleiro
         board[currentRow][currentColumn] = moveNumber;
-//        for(int i=0; i<=7; i++)
-//        {
-//        	for(int j=0; j<=7; j++)
-//        		System.out.print(board[i][j]<0? + board[i][j]+"|" : board[i][j]+" |");
-//        	System.out.println();
-//        }
 
-        while ( moveNumber < 64 ) // 63 movimentos no tabuleiro
+        while ( moveNumber <= 63 ) // 63 movimentos no tabuleiro
         {
             // (Re)inicializa o vetor de próximos movimentos possíveis
             for ( int i = 0; i <= 7; i++ )
@@ -178,10 +175,6 @@ public class Exer07_22
                     if((currentColumn + vertical[i] >= 0) && (currentColumn + vertical[i] <= 7)) // Verifica se não está fora da coluna
                         if (board[currentRow + horizontal[i]][currentColumn + vertical[i]] == -1) // Verifica se ainda não foi visitado
                             visit[counter++] = i;
-
-            for(int i = 0; i <= 7; i++)
-            	System.out.print(visit[i]);
-            System.out.println();
             
             if (visit[0]>-1) // Se existe pelo menos uma jogada possível
             {
@@ -208,29 +201,24 @@ public class Exer07_22
                             }
                         }
                     }
-                    
-                    for(int i = 0; i <= 7; i++)
-                    	System.out.print(visit[i]);
-                    System.out.println();
                 }
+                
                 board[currentRow][currentColumn] = moveNumber;
-                moveNumber++;
-                currentRow = currentRow + horizontal[visit[0]] ;
-                currentColumn = currentColumn + vertical[visit[0]];
                 movesHistory[moveNumber] = visit[0];
+                moveNumber++;
+                currentRow += horizontal[visit[0]] ;
+                currentColumn += vertical[visit[0]];
             }
             else // se não houver jogadas possíveis, faz RollBack
-            {break;}
+            {
+            	break;
+            	//moveNumber--;
+            }
         }
+        board[currentRow][currentColumn] = moveNumber;
 
-
-/*
-        for(int i = 0; i < visit.length; i++)
-            System.out.print(visit[i] + " |");
-        System.out.println("\n");
-*/
         // Imprime tabuleiro final
-        System.out.println(moveNumber);
+        if(moveNumber==63)
         for (int i = 0; i < 8; i++)
         {
             System.out.print( "|" );
@@ -240,5 +228,7 @@ public class Exer07_22
             else System.out.print( board[i][j] + "|" );
             System.out.println();
         }
+        System.out.println("---------------------------");
+}
     }
 }

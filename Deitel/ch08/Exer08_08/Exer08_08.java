@@ -14,6 +14,22 @@
 
 package ch08.Exer08_08;
 
-public class Exer08_08 {
-
+public class Exer08_08
+{
+	public static void main(String[] args)
+	{
+		Date date = new Date(4,26,1984);
+		System.out.print("Current Date: ");
+		System.out.println(date.toString());
+		
+		for (int i = 0; i < 365; i++)
+			date.nextDay();
+		System.out.print("Next year:    ");
+		System.out.println(date.toString());
+		
+		for (int i = 0; i < 30; i++)
+			date.nextDay();
+		System.out.print("Next month:   ");
+		System.out.println(date.toString());
+	}
 }

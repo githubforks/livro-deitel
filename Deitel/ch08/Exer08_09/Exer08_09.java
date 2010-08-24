@@ -10,6 +10,24 @@
 
 package ch08.Exer08_09;
 
-public class Exer08_09 {
-
+public class Exer08_09
+{
+	public static void main(String[] args)
+	{
+		Time2 time = new Time2();
+		
+		if(time.setHour(13))
+			System.out.println("OK!");
+		else System.out.println("Erro!");
+		
+		if(time.setMinute(50))
+			System.out.println("OK!");
+		else System.out.println("Erro!");
+		
+		if(time.setSecond(61))
+			System.out.println("OK!");
+		else System.out.println("Erro!");
+		
+		System.out.println(time.toUniversalString());
+	}
 }

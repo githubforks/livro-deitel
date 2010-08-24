@@ -29,7 +29,7 @@
  * diferentes de T, L ou AI!!! (no caso de um empate) devem estar em branco.
  *      Depois de cada linha a ser exibida, teste se o animal alcançou o quadrado
  * 70. Se tiver alcançado, exiba o vencedor e termine a aplicação. Se a tartaruga
- * ganhar, exiba A TARTARUGA VENDEU!!!EH!!! Se a lebre ganhar, exiba  A LEBRE GANHOU. OH!
+ * ganhar, exiba A TARTARUGA VENCEU!!!EH!!! Se a lebre ganhar, exiba  A LEBRE GANHOU. OH!
  * Se as duas ganharem na mesma hora, você pode querer favorecer a tartarua
  * (a 'coitadinha') ou pode querer exibir OCORREU UM EMPATE. Se nenhum animal
  * ganhar, realize o loop novamente para simular o próximo tique do relógio. Quando
@@ -49,12 +49,32 @@
  * Figura 7.34 Regras para ajustar as posições da tartaruga e da lebre
  *
  *      Mais adiante no livro, introduzimos várias capacidades do Java, imagens,
- * animação, som e multothreading. À medida que estudar esses recursos, você pode
+ * animação, som e multithreading. À medida que estudar esses recursos, você pode
  * se divertir aprimorando sua simulação da competição entre a lebre e a tartaruga.
  */
 
 package ch07.Exer07_28;
 
-public class Exer07_28 {
+import java.util.Random;
 
+public class Exer07_28
+{
+	public static void main(String[] args)
+	{
+		Caminho caminho = new Caminho();
+		Random random = new Random();
+		
+		caminho.inicio();
+		caminho.imprimeCaminho();
+		
+		while(caminho.posicaoLebre!=69 && caminho.posicaoTartaruga!=69)
+		{
+			int randomInt = random.nextInt(10);
+			caminho.moveLebre(randomInt);
+			caminho.moveTartaruga(randomInt);
+			caminho.imprimeCaminho();
+		}
+		
+		caminho.fim();
+	}
 }

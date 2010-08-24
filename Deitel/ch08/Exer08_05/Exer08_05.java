@@ -10,6 +10,15 @@
 
 package ch08.Exer08_05;
 
-public class Exer08_05 {
-
+public class Exer08_05
+{
+	public static void main(String[] args)
+	{
+		Time2 time = new Time2();
+		time.setSecond(1);
+		
+		System.out.println(time.getHour());
+		System.out.println(time.getMinute());
+		System.out.println(time.getSecond());
+	}
 }

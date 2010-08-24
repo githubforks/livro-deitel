@@ -6,6 +6,7 @@
 
 package ch08.Exer08_11;
 
-public class Exer08_11 {
+public class Exer08_11
+{
 
 }

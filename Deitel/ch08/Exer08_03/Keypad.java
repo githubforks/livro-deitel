@@ -2,11 +2,11 @@
  * Escreva um código Java para começar a implementar o projeto da classe Keypad.
  */
 
-package ch08.Exer08_03_;
+package ch08.Exer08_03;
 
 // A classe Keypad representa o teclado de um ATM
 public class Keypad {
-/*    // nenhum atributo foi especificado ainda
+    // nenhum atributo foi especificado ainda
 
     // construtor sem argumento
     public Keypad()
@@ -16,6 +16,6 @@ public class Keypad {
     // Operações
     public int getInput()
     {
+    	return 0;
     } // Fim do método getInput
-*/
 } // Fim da classe Keypad

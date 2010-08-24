@@ -16,6 +16,27 @@
 
 package ch07.Exer07_30;
 
-public class Exer07_30 {
+public class Exer07_30
+{
+	public static void main(String[] args)
+	{
+		//min = 62, max = 3579307;
+		Hand hand = new Hand();
+		DeckOfCards deck = new DeckOfCards();
+		
+		deck.shuffle();
+		hand.getCards(deck);
+		
+		if(hand.isRoyalStraightFlush()){System.out.println("Royal Straight Flush");}
+		else if (hand.isStraightFlush()){System.out.println("Straight Flush");}
+		else if (hand.isFour()){System.out.println("Four");}
+		else if (hand.isFullHouse()){System.out.println("Full House");}
+		else if (hand.isFlush()){System.out.println("Flush");}
+		else if (hand.isStraight()){System.out.println("Straight");}
+		else if (hand.isTriple()){System.out.println("Triple");}
+		else if (hand.isTwoPair()){System.out.println("Two Pair");}
+		else if (hand.isOnePair()){System.out.println("One Pair");}
+		else System.out.println("High Card");;
 
+	}
 }

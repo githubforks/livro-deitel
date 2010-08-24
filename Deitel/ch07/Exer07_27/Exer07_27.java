@@ -28,5 +28,25 @@ package ch07.Exer07_27;
 
 public class Exer07_27
 {
-
+	public static void main(String[] args)
+	{
+		boolean[] primos = new boolean[1000];
+		
+		int i = 0;
+		while(i<primos.length)
+		{
+			primos[i]=true;
+			i++;
+		}
+		
+		for(i = 2; i<primos.length; i++)
+			if(primos[i])
+				for(int j=i*2; j<primos.length; j+=i)
+					primos[j]=false;
+		
+		for(i = 0; i<primos.length; i++)
+			if(primos[i])
+				System.out.println(i);
+	}
 }
+
