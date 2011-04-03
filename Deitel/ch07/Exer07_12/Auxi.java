@@ -2,7 +2,7 @@ package ch07.Exer07_12;
 
 import java.util.Scanner;
 
-public class Aux
+public class Auxi
 {
 	private Scanner input;
 	private boolean b;
@@ -10,7 +10,7 @@ public class Aux
 	
 	
 	// Construtor
-	public Aux()
+	public Auxi()
 	{
 		input = new Scanner( System.in );
 	}

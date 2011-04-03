@@ -20,7 +20,7 @@ public class Exer07_12
 		int contador = 0, num = 0;
 		int[] lidos = new int[5];
 		boolean inserido;
-		Aux aux = new Aux();
+		Auxi aux = new Auxi();
 		
 		while( contador < lidos.length )
 		{
